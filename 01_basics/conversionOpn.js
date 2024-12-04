@@ -22,3 +22,16 @@ console.log(boolIsLogIn);
 let someNum = 33;
 let stringNum = String(someNum);
 console.log(typeof stringNum);
+
+
+/***************************Operations*****************************/
+let value = 3;
+let negVal = -value;
+// console.log(negVal);
+// console.log(2+2);
+// console.log(2-2);
+// console.log(2*2);
+// console.log(2**3);
+// console.log(2/3);
+// console.log(2%3);
+
