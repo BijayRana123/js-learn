@@ -29,3 +29,28 @@ const myFunction = function () {
 //Reference(Non-Primitive)
 //Array, Objects, Functions
 
+
+/************************************ */
+//Stack(Primitive)  => gives the copy of the value
+//Heap(Reference)   =>gives the actual reference of the data stored
+
+let myName = "Bijay";
+let aliasName = myName;
+aliasName = "bjane717";
+
+console.log(myName);
+console.log(aliasName);  
+
+let userOne = {
+    name: "Bijay",
+    age: 32,
+};
+let userTwo = userOne;
+userTwo.age = 31;
+console.log(userOne.age);
+console.log(userTwo.age);
+
+
+
+
+
