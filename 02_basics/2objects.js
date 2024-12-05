@@ -23,12 +23,21 @@ const obj3 = {5: "a", 6: "b"};
 const obj4 = {...obj1, ...obj2, ...obj3};
 // console.log(obj4);
 
-console.log(tinderUser);
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));  // stores each key, values in an array
-console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));  // stores each key, values in an array
+// console.log(tinderUser.hasOwnProperty("isLoggedIn"));
 
+const course = {
+    courseName: "Js in hindi",
+    price: "99.99",
+    courseInstructor: "Hitesh",
+};
+// course.courseInstructor
+const {courseInstructor:instructor} = course;
+// console.log(courseInstructor);
+console.log(instructor);
 
 
 
