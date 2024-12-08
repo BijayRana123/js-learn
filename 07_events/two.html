@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronus</title>
+</head>
+<body>
+    <h1>2 Projects</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    function sayName() {
+        console.log("Bijay");
+    };
+    const changeH1 = () => document.querySelector('h1').innerHTML = "Best Java Series"
+    const changeMe = setTimeout(changeH1, 2000);
+
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearTimeout(changeMe);
+        console.log('Stopped');      
+    });
+</script>
+</html>
