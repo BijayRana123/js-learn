@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+    <script>
+        function addLang(langName){
+            const li = document.createElement('li');
+            li.innerHTML = `${langName}`;
+            document.querySelector('.language').appendChild(li);
+        };
+        addLang("Python");
+        function addOptLang(lang) {
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(lang));
+            document.querySelector('.language').appendChild(li);
+        };
+        addOptLang("TypeScript");
+        addOptLang("Rust");
+        addOptLang("RUBY");
+
+        //eDIT
+        const lang = document.querySelector("li:nth-child(2)");
+        console.log(lang);
+        lang.innerHTML = "Mojo";  //1st method
+        const first = document.querySelector("li:first-child");
+        first.outerHTML = '<li>Django</li>' //second methond
+
+        //remove
+        const last = document.querySelector("li:last-child");
+        last.remove();
+        
+    </script>
+</html>
