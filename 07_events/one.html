@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <ul>
+        <li>Cow</li>
+        <li id="owl">Owl</li>
+        <li>Tulip</li>
+    </ul>
+</body>
+    <script>
+        
+        // document.getElementById('owl').onclick = function () {
+        //     alert(`Owl`);
+        // };
+
+        //attachEvent
+        //jQuery
+
+        //type,timestamp, preventDefault
+        //target, toElement, srcElement, currentTarget
+        //clientX, clientY, screenX, screenY
+        //altKey, ctrlKey, shiftKey, keyCode
+        document.getElementById('owl').addEventListener('click', function () {
+            alert(`Owl`);
+        });
+        document.querySelector('#owl').addEventListener('click', function(e){
+            e.preventDefault();
+            console.log(e.target.parentNode);
+            const removeIt = e.target.parentNode;
+            removeIt.remove();
+        },false)
+
+    </script>
+</html>
