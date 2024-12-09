@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"XMLHttp"</title>
+</head>
+<body>
+    <div class="container">
+        <img src="" alt="" height= "50px" width="50px">
+        <h4>Followers : <span></span></h4>
+    </div>
+</body>
+<script>
+    const apiUrl = "https://api.github.com/users/hiteshchaudhary";
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',apiUrl);    
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)
+            console.log(data);
+            document.querySelector('img').src = data.avatar_url;
+            document.querySelector('span').innerHTML = data.followers
+        }
+    }
+    xhr.send();
+</script>
+</html>
